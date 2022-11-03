@@ -64,10 +64,30 @@ weather_df %>%
          title = "Boxplot of maxiumum daily temperature (C)")
 ```
 
-### Chart C
+### Lineplot
 
 ```{r}
+central_park = 
+  weather_df %>% 
+  filter(name == "CentralPark_NY")
 
+waikiki = 
+  weather_df %>% 
+  filter(name == "Waikiki_HA")
+
+line_ggplot = 
+  waikiki %>% 
+ggplot(aes(x = date, y = tmax, color = name)) + 
+  geom_point() + 
+  geom_line(data = central_park) +
+  labs(
+      x = "Date",
+      y = "Maximum Daily Temp (C)",
+      title = "Lineplot of maximum temp in Centralpart and Waikiki",
+      caption = "Data come from the rnoaa package"
+    )
+
+ggplotly(line_ggplot)
 
 ```
 
