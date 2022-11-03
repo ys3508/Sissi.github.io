@@ -39,7 +39,14 @@ Column {data-width=550}
 ### Scatterplot
 
 ```{r}
-
+weather_df %>%
+  mutate(text_label = str_c("Min Temp: ", tmin, "\nMax Temp: ", tmax)) %>% #\n: next line;
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+    color = ~name, text = ~text_label, alpha = 0.5) %>% 
+  layout(xaxis = list(title = "Minimum daily temperature (C)"),
+         yaxis = list(title = "Maxiumum daily temperature (C)"),
+         title = "Scatterplot of daily temperature (C)")
 
 ```
 
