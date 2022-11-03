@@ -8,7 +8,9 @@ navbar:
     - text: "About Sissi"
       href: sissi.html 
     - text: "Experience"
-      href: experience.html 
+      href: experience.html
+    - text: "Plotly"
+      href: plotly.html 
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/yequesun/    
     - icon: fa-envelope fa-lg
