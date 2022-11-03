@@ -53,10 +53,15 @@ weather_df %>%
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Chart B
+### Boxplot
 
 ```{r}
-
+weather_df %>% 
+  mutate(name = fct_reorder(id, name)) %>% #reorder the plot according to the neighborhood and price;
+  plot_ly(y = ~tmax, color = ~name, type = "box", colors = "viridis")  %>% 
+  layout(xaxis = list(title = "Site ID"),
+         yaxis = list(title = "Maxiumum daily temperature (C)"),
+         title = "Boxplot of maxiumum daily temperature (C)")
 ```
 
 ### Chart C

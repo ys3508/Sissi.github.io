@@ -75,7 +75,7 @@ weather_df %>%
 ```
 
 ### Boxplot
-Boxplot to show neighbouthood according to price
+
 
 ```{r}
 weather_df %>% 
