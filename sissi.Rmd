@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About Sissi"
 output: 
   html_document:
     toc: true

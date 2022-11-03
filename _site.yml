@@ -3,8 +3,8 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About me"
-      href: about.html 
+    - text: "About Sissi"
+      href: sissi.html 
     - text: "Experience"
       href: experience.html   
     - icon: fa-brands fa-linkedin
